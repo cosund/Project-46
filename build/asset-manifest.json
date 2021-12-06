@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/cosund/Project-46static/js/main.caeb7fdf.chunk.js",
+    "main.js.map": "/cosund/Project-46static/js/main.caeb7fdf.chunk.js.map",
+    "runtime-main.js": "/cosund/Project-46static/js/runtime-main.425f8cad.js",
+    "runtime-main.js.map": "/cosund/Project-46static/js/runtime-main.425f8cad.js.map",
+    "index.html": "/cosund/Project-46index.html"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.425f8cad.js",
+    "static/js/main.caeb7fdf.chunk.js"
+  ]
+}

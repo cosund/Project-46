@@ -7,7 +7,7 @@ function App(props) {
   return (
     <div>
     <ShowPresenter>
-      <menuView model={props.model}  />
+      <MenuView model={props.model}  />
     </ShowPresenter>
     </div>
   );

@@ -1,3 +1,4 @@
+import React from 'react';
 function ShowPresenter(props){
     const [hashState, setHashState] = React.useState(window.location.hash);
     const listener = (() => {

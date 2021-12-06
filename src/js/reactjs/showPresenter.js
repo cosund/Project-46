@@ -13,3 +13,5 @@ function ShowPresenter(props){
       </div>
     )
 }
+
+export default ShowP;

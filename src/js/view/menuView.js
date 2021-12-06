@@ -20,3 +20,5 @@ function MenuView(props){
         </div>
     )
 }
+
+export default Menu;

@@ -21,4 +21,4 @@ function MenuView(props){
     )
 }
 
-export default Menu;
+export default MenuView;

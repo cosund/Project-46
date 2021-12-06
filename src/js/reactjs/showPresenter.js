@@ -14,4 +14,4 @@ function ShowPresenter(props){
     )
 }
 
-export default ShowP;
+export default ShowPresenter;

@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "react-scripts test",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "repository": {
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/cosund/Project-46/issues"
   },
-  "homepage": "https://github.com/cosund/Project-46#readme"
+  "homepage": "https://github.com/cosund/Project-46#readme",
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
+  }
 }

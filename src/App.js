@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import '.view/menuView'
-import '.reactjs/showPresenter'
+import MenuView from '.view/menuView.js'
+import ShowPresenter from '.reactjs/showPresenter.js'
 
 function App(props) {
   return (

@@ -1,5 +1,5 @@
 import './style.css';
-import './js/view/drinkSource.js';
+import './drinkSource.js';
 
 function FilterView(props){
     return(

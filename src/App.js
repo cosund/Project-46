@@ -3,7 +3,7 @@ import './App.css';
 import MenuView from './js/view/menuView.js';
 import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterView from './js/view/filterView.js';
-import './js/drinkSource.js';
+import './js/view/drinkSource.js';
 import './js/drinkModel.js';
 import './js/apiConfig.js';
 

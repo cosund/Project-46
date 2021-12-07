@@ -4,7 +4,7 @@ import MenuView from './js/view/menuView.js';
 import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterView from './js/view/filterView.js';
 import './js/drinkSource.js';
-import './js/apiConfig.js'
+import './js/apiConfig.js';
 
 function App(props) {
   return (
@@ -19,4 +19,5 @@ function App(props) {
     </div>
   );
 }
+
 export default App;

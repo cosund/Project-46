@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './style.css'
 import './App.css';
 import MenuView from './js/view/menuView.js'
 import ShowPresenter from './js/reactjs/showPresenter.js'

@@ -15,14 +15,6 @@ function App(props){
           <div className="mainContent"><ShowPresenter hash="#filter">
                                    <FilterView filterResults={props.model}/>
                                    </ShowPresenter>
-
-                                   <ShowPresenter hash="#details">
-                                   <DetailsView model={props.model}/>
-                                   </ShowPresenter>
-
-                                   <ShowPresenter hash="myDrink">
-                                   <MyDrinkView model={props.model}/>
-                                   </ShowPresenter>
           </div>
          </div>
     );

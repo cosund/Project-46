@@ -1,4 +1,4 @@
-import './drinkModel.js';
+import './apiConfig.js';
 const  DrinkSource={   // JS object creation literal
    apiCall(params) {
      console.log(BASE_URL)

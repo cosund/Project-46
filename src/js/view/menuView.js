@@ -1,4 +1,4 @@
-import './js/view/style.css'
+import './src/js/style.css'
 
 function MenuView(props){
     return(

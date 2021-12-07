@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './js/drinkModel.js';
+
+const myModel = new DrinkModel();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App model={myModel}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

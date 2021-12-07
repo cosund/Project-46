@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './js/drinkModel.js';
+import DrinkModel from './js/drinkModel.js';
 
 const myModel = new DrinkModel();
 

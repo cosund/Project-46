@@ -5,3 +5,5 @@ class DrinkModel{
       this.currentDish = currentDrink;
     }
 }
+
+export default DrinkModel;

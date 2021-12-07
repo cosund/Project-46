@@ -1,4 +1,5 @@
 import './style.css'
+
 function FilterView(props){
     return(
         <div className="filterView">

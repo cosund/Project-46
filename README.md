@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### About the project
+This app is about finding recipes on different drinks. You will be able to search on a drink in a search bar, however a filter view will give the opportunity to search on a drink based on what it should/should not contain and also what base alcohol. You can also save your favorite drinks in your own drink list.
+
+### What we have done
+We have managed to make the deploy work and render one view. We have designed the menuView and started on the filterView. We have also manged to gather data from our API.
+
+### What we are gonna do
+We still need to the rest of the views and make them dynamic.
+
+### Different filenames
+view folder: contains the different views
+reactjs folder: contains the different presenters to make the different views dynamic
+App.js: Displays the diferent views
+index.js: calls on App.js
+drinkSource.js: implements a search function with our API
+apiConfig.js: link and key to the API
+filterView.js: where you will be able to search and even filter drinks

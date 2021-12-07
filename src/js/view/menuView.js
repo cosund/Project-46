@@ -1,4 +1,5 @@
 import './style.css'
+
 function MenuView(props){
     return(
         <div className="menubar">

@@ -9,16 +9,25 @@ import './js/apiConfig.js';
 
 function App(props) {
   return (
-    <div>
-    <ShowPresenter>
-      <MenuView model={props.model}  />
-    </ShowPresenter>
-
-    <ShowPresenter>
+    <div className="flexparent">
+    <div className="menubar"><MenuView categoryChosen={category => console.log(category)}/></div>
+    <div className="mainContent">
+    
+    <ShowPresenter hash="#filter">
     <FilterView model={props.model} />
     </ShowPresenter>
     </div>
   );
 }
+
+function defaultRoute(){
+  const knownRoutes = ["#search", "#myDrink", "#details"]
+    if(!knownRoutes.includes(window.location.hash)) {
+      window.location.hash="#search";
+  }
+}
+defaultRoute(); // when the application loads, set the default route!
+
+window.addEventListener("hashchange", defaultRoute);
 
 export default App;

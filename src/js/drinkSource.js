@@ -32,13 +32,4 @@ const  DrinkSource={   // JS object creation literal
   getDishDetails(id){
     return DrinkSource.apiCall(
       `recipes/${id}/information`); }
-};filterIngredient(params) {
-   return DrinkSource.apiCall(
-     'filter.php?i=' +
-     params
-   );
-},
-
-  getDishDetails(id){
-    return DrinkSource.apiCall(
-      `recipes/${id}/information`); }
+};

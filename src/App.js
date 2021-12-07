@@ -5,7 +5,6 @@ import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterView from './js/view/filterView.js';
 import './js/view/drinkSource.js';
 import './js/drinkModel.js';
-import './js/apiConfig.js';
 import './js/view/style.css';
 
 function App(props){

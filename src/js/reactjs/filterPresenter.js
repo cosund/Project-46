@@ -1,3 +1,5 @@
+import FilterView from './src/js/view/filterView.js';
+
 function FilterPresenter(props){
     //hooks called and returning current value
     const [promise, setPromise]=React.useState(null);
@@ -24,3 +26,5 @@ function FilterPresenter(props){
   
     )
   }
+
+  export default FilterPresenter;

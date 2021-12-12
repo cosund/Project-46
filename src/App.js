@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import MenuView from './js/view/menuView.js';
 import ShowPresenter from './js/reactjs/showPresenter.js';
-import FilterView from './js/view/filterView.js';
+import ShowPresenter from './js/reactjs/filterPresenter.js';
 import './js/view/drinkSource.js';
 import './js/drinkModel.js';
 import './js/view/style.css';
@@ -12,7 +11,7 @@ function App(props){
         <div className="flexparent">
           <div className="menubar"><MenuView categoryChosen={category => console.log(category)}/></div>
           <div className="mainContent"><ShowPresenter hash="#filter">
-                                   <FilterView filterResults={props.model}/>
+                                   <FilterPresenter filterResults={props.model}/>
                                    </ShowPresenter>
           </div>
          </div>

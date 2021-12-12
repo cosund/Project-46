@@ -23,3 +23,5 @@ function usePromise(promise){
     }, [promise]);
     return [data, error];
   }
+
+  export default usePromise;

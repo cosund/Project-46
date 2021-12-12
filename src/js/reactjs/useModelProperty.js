@@ -11,3 +11,5 @@ function useModelProperty(model, propertyName){
     }, [model]); //Cleanup model
     return value
 }
+
+export default useModelProperty;

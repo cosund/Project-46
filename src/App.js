@@ -20,7 +20,7 @@ function App(props){
 }
 
 function defaultRoute(){
-  const knownRoutes = ["#search", "#myDrink", "#details"]
+  const knownRoutes = ["#search", "#myDrink", "#details", "#filter"]
     if(!knownRoutes.includes(window.location.hash)) {
       window.location.hash="#search";
   }

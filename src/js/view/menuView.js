@@ -7,11 +7,13 @@ function MenuView(props){
             <div className="dropdown">
                 <span onClick={() => window.location.hash="#filter"}>filter by category</span>
                 <div className="dropdown-content">
-                    <p onClick={() => props.categoryChosen("vodka")}>vodka</p>
-                    <p onClick={() => props.categoryChosen("gin")}>gin</p>
-                    <p onClick={() => props.categoryChosen("rum")}>rum</p>
-                    <p onClick={() => props.categoryChosen("tequila")}>tequila</p>
-                    <p onClick={() => props.categoryChosen("triple sec")}>triple sec</p>
+                    {props.options.map(
+                        function(opt){
+                            return(
+                            <p key={opt} onClick={() => props.categoryChosen(opt)}>{opt}</p>
+                            )
+                        }
+                    )}
                 </div>
             </div>
             <div className="itemMyDrinks"><a href="myDrink" onClick={event =>{

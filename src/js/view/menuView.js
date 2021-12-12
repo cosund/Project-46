@@ -7,12 +7,11 @@ function MenuView(props){
             <div className="dropdown">
                 <span onClick={() => window.location.hash="#filter"}>filter by category</span>
                 <div className="dropdown-content">
-                    {props.options.map(
-                        function(opt){
-                            return(
+                    {props.options.map( opt =>
+                            (
                             <p key={opt} onClick={() => props.categoryChosen(opt)}>{opt}</p>
                             )
-                        }
+                        
                     )}
                 </div>
             </div>

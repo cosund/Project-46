@@ -3,7 +3,8 @@ import FilterView from '../view/filterView.js';
 import MenuView from '../view/menuView.js';
 import '../view/drinkSource.js';
 import useModelProperty from './useModelProperty.js';
-import './usePromise.js';
+import usePromise from './usePromise.js';
+import '../view/promiseNoData.js';
 
 function FilterPresenter(props){
     //hooks called and returning current value

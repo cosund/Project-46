@@ -12,3 +12,5 @@ function promiseNoData(promise, data, error){
       return false;
     }
 }
+
+export default promiseNoData;

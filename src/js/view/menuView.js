@@ -1,13 +1,13 @@
 import './style.css'
 
-function MenuView(props){
+function MenuView(prop){
     return(
         <div className="menubar">
             <div className="itemStart"><a>start</a></div>
             <div className="dropdown">
                 <span onClick={() => window.location.hash="#filter"}>filter by category</span>
                 <div className="dropdown-content">
-                    {props.options.map( (arg) =>
+                    {prop.options.map( (arg) =>
                             (
                             <p key={arg} onClick={() => props.categoryChosen(arg)}>{arg}</p>
                             )

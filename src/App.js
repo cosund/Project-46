@@ -12,9 +12,7 @@ function App(props){
         <div className="flexparent">
           <div className="menubar"><MenuView categoryChosen={category => console.log(category)}/></div>
           <div className="mainContent">
-            <ShowPresenter hash="#filter">
-              <FilterPresenter filterResults={props.model}/>
-            </ShowPresenter>
+            
 
             <ShowPresenter hash="#myDrink">
               <MyDrinkView/>

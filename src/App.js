@@ -1,7 +1,7 @@
 import './App.css';
 import MenuView from './js/view/menuView.js';
 import ShowPresenter from './js/reactjs/showPresenter.js';
-import ShowPresenter from './js/reactjs/filterPresenter.js';
+import FilterPresenter from './js/reactjs/filterPresenter.js';
 import './js/view/drinkSource.js';
 import './js/drinkModel.js';
 import './js/view/style.css';

@@ -5,3 +5,4 @@ function MyDrinkView(props){
     </div>
   )
 }
+export default MyDrinkView;

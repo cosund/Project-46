@@ -1,3 +1,5 @@
+import React from 'react';
+
 function usePromise(promise){
     const [data, setData]=React.useState(null);
     const [error, setError]=React.useState(null);

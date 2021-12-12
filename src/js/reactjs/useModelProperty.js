@@ -1,3 +1,5 @@
+import React from 'react';
+
 function useModelProperty(model, propertyName){
     // Hook called with current value
     const [value, setValue] = React.useState(model[propertyName]);

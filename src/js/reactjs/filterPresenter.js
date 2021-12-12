@@ -1,10 +1,10 @@
 import React from 'react';
 import FilterView from '../view/filterView.js';
 import MenuView from '../view/menuView.js';
-import '../view/drinkSource.js';
+import DrinkSource from '../view/drinkSource.js';
 import useModelProperty from './useModelProperty.js';
 import usePromise from './usePromise.js';
-import '../view/promiseNoData.js';
+import promiseNoData from '../view/promiseNoData.js';
 
 function FilterPresenter(props){
     //hooks called and returning current value

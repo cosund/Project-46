@@ -32,3 +32,5 @@ const  DrinkSource={   // JS object creation literal
     return DrinkSource.apiCall(
       `recipes/${id}/information`); }
 };
+
+export default DrinkSource;

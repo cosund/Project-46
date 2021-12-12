@@ -1,4 +1,5 @@
-import FilterView from './src/js/view/filterView.js';
+import FilterView from '../view/filterView.js';
+import MenuView from '../view/menuView.js';
 
 function FilterPresenter(props){
     //hooks called and returning current value
@@ -23,7 +24,6 @@ function FilterPresenter(props){
        {promiseNoData(promise, data, error) ||
            <FilterView filterResults={data} />}
       </React.Fragment>
-  
     )
   }
 

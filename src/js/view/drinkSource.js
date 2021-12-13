@@ -27,10 +27,10 @@ const  DrinkSource={   // JS object creation literal
      params
    );
 },
-
-  getDishDetails(id){
+  // Api call, Input: drink-id, Output: drinkDetails...
+  getDrinkDetails(id){
     return DrinkSource.apiCall(
-      `recipes/${id}/information`); }
+      `lookup.php?i=` + id); }
 };
 
 export default DrinkSource;

@@ -2,7 +2,6 @@ import React from 'react';
 import FilterView from '../view/filterView.js';
 import MenuView from '../view/menuView.js';
 import DrinkSource from '../view/drinkSource.js';
-import useModelProperty from './useModelProperty.js';
 import usePromise from './usePromise.js';
 import promiseNoData from '../view/promiseNoData.js';
 

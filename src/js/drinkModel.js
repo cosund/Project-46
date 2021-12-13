@@ -1,9 +1,13 @@
+import DrinkSource from "./view/drinkSource";
+
 class DrinkModel{
-  constructor(drinks=[], currentDrink=null){
+  constructor(drinks=[], currentDrink=null, currentFilter = null){
       this.observers = [];
       this.drinks = drinks;
-      this.currentDish = currentDrink;
+      this.currentDrink = currentDrink;
+      this.currentFilter = currentFilter;
     }
+
     addObserver(callback){
       this.observers = [...this.observers, callback];
     }
@@ -22,8 +26,8 @@ class DrinkModel{
       })
     }
     addToMenu(drink){
-      const found = this.drinks.filter((e) => e === dish)
-      if(found !== dish){
+      const found = this.drinks.filter((e) => e === drink)
+      if(found !== drink){
         this.drinks = [...this.drinks, drink]
         this.notifyObservers();
     }
@@ -34,5 +38,37 @@ class DrinkModel{
       this.drinks = this.drinks.filter(drinkID => drinkID.id !== drinkData.id)
       this.notifyObservers()
     }
+    };
+    setDishes(drinks){
+      this.drinks= [...drinks];
+      this.notifyObservers()
+    }
+    setCurrentDish(id){
+      if(this.currentDrink === id){
+        return
+      }
+      this.currentDrink = id;
+      this.currentDrinkDetails = null;
+      this.currentDrinkError = null;
+      this.notifyObservers();
+
+      if(this.currentDrink) {
+        DrinkSource.getDrinkDetails(this.currentDrink)
+        .then((results) => {
+          if (this.currentDrink === id) {
+            this.currentDrinkDetails = results;
+            this.notifyObservers();
+          }
+        })
+        .catch(err => {
+          if (this.currentDrink === id) {
+            this.currentDrinkError = err;
+            this.notifyObservers();
+          }
+        })
+      }
     }
 }
+
+export default DrinkModel;
+

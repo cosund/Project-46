@@ -1,10 +1,10 @@
 import './App.css';
 import MenuView from './js/view/menuView.js';
+import SearchPresenter from './js/reactjs/searchPresenter';
 import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterPresenter from './js/reactjs/filterPresenter.js';
 import MyDrinkView from './js/view/myDrinkView';
 import './js/view/drinkSource.js';
-import './js/drinkModel.js';
 import './js/view/style.css';
 
 function App(props){
@@ -17,7 +17,11 @@ function App(props){
             </ShowPresenter>
 
             <ShowPresenter hash="#myDrink">
-              <MyDrinkView/>
+              <MyDrinkView model={props.model}/>
+            </ShowPresenter>
+
+            <ShowPresenter hash="#search">
+              <SearchPresenter model={props.model}/>
             </ShowPresenter>
           </div>
          </div>

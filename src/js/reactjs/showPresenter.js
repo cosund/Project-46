@@ -7,7 +7,7 @@ function ShowPresenter(props){
     })
     React.useEffect(() => {
       window.addEventListener("hashchange", listener);
-      return (() => window.removeEventListener(listener));
+      return (() => window.removeEventListener("", listener));
     }, []);
     return (
       <div className={(hashState !== props.hash) ? "hidden" : ""}>

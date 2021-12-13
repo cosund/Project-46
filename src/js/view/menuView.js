@@ -20,7 +20,7 @@ function MenuView(props){
               event.preventDefault();
               window.location.hash="#myDrink";
             }}>my drink page</a></div>
-            <div className="itemInput"><input placeholder="search..." type="text"></input></div>
+            <div className="itemInput"><input onChange={ e=> props.onText(e.target.value) } placeholder="search..." type="text"></input></div>
         </div>
     );
 }

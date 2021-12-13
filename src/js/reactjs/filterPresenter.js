@@ -20,7 +20,7 @@ function FilterPresenter(props){
     //React.Framnet used to return multiple elements instead of div
     return(
       <React.Fragment>
-       <MenuView className="menubar" options = {["vodka","tequila", "rum", "gin", "triple sec"]}
+       <MenuView className="menubar" options={["vodka","tequila", "rum", "gin", "triple sec"]}
        categoryChosen={category => {
           //setFilterQuery(category);  //For some reasen bugs out the below
           setPromise(DrinkSource.filterIngredient(category));

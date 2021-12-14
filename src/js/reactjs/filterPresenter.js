@@ -1,9 +1,8 @@
 import React from 'react';
-import FilterView from '../view/filterView.js';
-import MenuView from '../view/menuView.js';
 import DrinkSource from '../view/drinkSource.js';
 import usePromise from './usePromise.js';
 import promiseNoData from '../view/promiseNoData.js';
+import {FilterOptions, FilterResults} from '../view/filterView.js';
 
 function FilterPresenter(props){
     //hooks called and returning current value

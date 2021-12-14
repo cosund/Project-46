@@ -1,8 +1,7 @@
 import './style.css';
-import './drinkSource.js';
+import DrinkSource from './drinkSource';
 
 let alphabet = ['A', 'B', 'C', 'D', 'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','Z'];
-let mainIng = new Array(DrinkSource.listCategories("i").then(data => data));
 function FilterOptions(props){
     return(
         <div className="filterOptions">
@@ -59,4 +58,4 @@ function FilterResults(props){
     )
 }
 
-export default FilterView;
+export {FilterOptions, FilterResults};

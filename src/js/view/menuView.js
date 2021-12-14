@@ -14,13 +14,20 @@ function MenuView(props){
                             )
                         
                     )}
+                    <button onClick={ ()=> props.onSearch() }>
+                        Search
+                    </button>
                 </div>
             </div>
             <div className="itemMyDrinks"><a href="myDrink" onClick={event =>{
               event.preventDefault();
               window.location.hash="#myDrink";
             }}>my drink page</a></div>
-            <div className="itemInput"><input onChange={ e=> props.onText(e.target.value) } placeholder="search..." type="text"></input></div>
+            <div className="itemInput"><input onChange={ e=> props.onText(e.target.value) } placeholder="search..." type="text"></input>
+            <button onClick={ (event)=> {props.onSearch(); window.location.hash="#search";}}>
+                Search
+            </button>
+            </div>
         </div>
     );
 }

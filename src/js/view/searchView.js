@@ -1,5 +1,3 @@
-function eventPrinter(evt){ console.log(evt);}
-
 function SearchResultsView(props){
   return (<div className="flexParent">
       {

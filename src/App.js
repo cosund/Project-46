@@ -4,6 +4,7 @@ import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterPresenter from './js/reactjs/filterPresenter.js';
 import MyDrinkView from './js/view/myDrinkView';
 import MenuPresenter from './js/reactjs/MenuPresenter';
+import StartView from './js/view/startView';
 import './js/view/drinkSource.js';
 import './js/view/style.css';
 
@@ -12,6 +13,10 @@ function App(props){
         <div className="flexparent">
           <div className="menubar"><MenuPresenter model={props.model}/></div>
           <div className="mainContent">
+            <ShowPresenter hash="#start">
+              <StartView/>
+            </ShowPresenter>
+
             <ShowPresenter hash="#filter">
               <FilterPresenter filterResults={props.model}/>
             </ShowPresenter>
@@ -29,9 +34,9 @@ function App(props){
 }
 
 function defaultRoute(){
-  const knownRoutes = ["#search", "#myDrink", "#details", "#filter"]
+  const knownRoutes = ["#search", "#myDrink", "#details", "#filter", "#start"]
     if(!knownRoutes.includes(window.location.hash)) {
-      window.location.hash="#search";
+      window.location.hash="#start";
   }
 }
 defaultRoute(); // when the application loads, set the default route!

@@ -2,7 +2,7 @@ import React from 'react';
 import DrinkSource from '../view/drinkSource';
 import promiseNoData from '../view/promiseNoData';
 import usePromise from './usePromise';
-import SearchResultsView from '../view/searchView.js';
+import {SearchBarView, SearchResultsView} from '../view/searchView.js';
 
 function SearchPresenter(props){
   //hooks called and returning current value

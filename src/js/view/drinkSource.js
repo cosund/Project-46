@@ -2,30 +2,48 @@ import React from 'react';
 
 const  DrinkSource={   // JS object creation literal
   apiCall(params) {
-     console.log("https://www.thecocktaildb.com/api/json/v1/1/")
-     console.log(params);
-     return fetch("https://www.thecocktaildb.com/api/json/v1/1/" + params).then((res) => {
-       if(res.status !== 200) throw res.statusText;
-       return res.json()
-    });
-  },
-  searchCocktail(params) {
-   return DrinkSource.apiCall(
-     'search.php?s=' +
-     params
-   );
+    console.log("https://www.thecocktaildb.com/api/json/v1/1/" + params);
+    return fetch("https://www.thecocktaildb.com/api/json/v1/1/" + params).then((res) => {
+      if(res.status !== 200) throw res.statusText;
+      return res.json()
+   });
  },
-  searchIngredient(params) {
-     return DrinkSource.apiCall(
-       'search.php?i=' +
-       params
-     );
-  },
-  filterIngredient(params) {
+ searchCocktail(params) {
+  return DrinkSource.apiCall(
+    'search.php?s=' +
+    params
+  );
+},
+ searchIngredient(params) {
+    return DrinkSource.apiCall(
+      'search.php?i=' +
+      params
+    );
+ },
+ listCategories(params) {
    return DrinkSource.apiCall(
-     'filter.php?i=' +
-     params
+     'list.php?' + params + '=list'
    );
+},
+ filterIngredient(params) {
+   if(!params) {
+     console.error("No filter provided") 
+     return;
+   }
+  return DrinkSource.apiCall(
+    'filter.php?i=' +
+    params
+  );
+},
+filterChar(params) {
+ if(!params) {
+   console.error("No filter provided") 
+   return;
+ }
+return DrinkSource.apiCall(
+  'search.php?f=' +
+  params
+);
 },
   // Api call, Input: drink-id, Output: drinkDetails...
   getDrinkDetails(id){

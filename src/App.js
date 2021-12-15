@@ -10,7 +10,7 @@ import './js/view/style.css';
 function App(props){
    return  (
         <div className="flexparent">
-          <div className="menubar"><MenuPresenter categoryChosen={category => console.log(category)}/></div>
+          <div className="menubar"><MenuPresenter model={props.model}/></div>
           <div className="mainContent">
             <ShowPresenter hash="#filter">
               <FilterPresenter filterResults={props.model}/>

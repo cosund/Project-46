@@ -43,7 +43,7 @@ class DrinkModel{
       this.drinks= [...drinks];
       this.notifyObservers()
     }
-    setCurrentDish(id){
+    setCurrentDrink(id){
       if(this.currentDrink === id){
         return
       }
@@ -71,4 +71,3 @@ class DrinkModel{
 }
 
 export default DrinkModel;
-

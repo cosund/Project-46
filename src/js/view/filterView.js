@@ -2,40 +2,50 @@ import './style.css';
 import DrinkSource from './drinkSource';
 
 let alphabet = ['A', 'B', 'C', 'D', 'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','Z'];
+let mainIng = new Array(DrinkSource.listCategories("i").then(data => data));
 function FilterOptions(props){
     return(
         <div className="filterOptions">
-            <div className="ingridientSort">
-                <p className="filterTopic">Sort by Main Ingridient:</p>
-                <p onClick={() => props.categoryChosen("vodka")}>- Vodka</p>
-                <p onClick={() => props.categoryChosen("gin")}>- Gin</p>
-                <p onClick={() => props.categoryChosen("rum")}>- Rum</p>
-                <p onClick={() => props.categoryChosen("tequila")}>- Tequila</p>
-                <p onClick={() => props.categoryChosen("triple sec")}>- Triple sec</p>
+            <div class="ingrediensort dropdown">
+            <button class="filterTopic">Sort by main Ingredient</button>
+            <div class="dropdown-content">
+            <a onClick={() => props.categoryChosen("vodka")}>Vodka</a>
+            <a onClick={() => props.categoryChosen("gin")}>Gin</a>
+            <a onClick={() => props.categoryChosen("rum")}>Rum</a>
+            <a onClick={() => props.categoryChosen("tequila")}>Tequila</a>
+            <a onClick={() => props.categoryChosen("triple sec")}>Triple sec</a>
             </div>
-            <div className="colorSort">
-                <p className="filterTopic">Sort by Color:</p>
-                <p onClick={() => props.categoryChosen("gin")}>- Blue</p>
-                <p onClick={() => props.categoryChosen("rum")}>- Red</p>
-                <p onClick={() => props.categoryChosen("tequila")}>- Green</p>
-                <p onClick={() => props.categoryChosen("triple sec")}>- Yellow</p>
             </div>
-            <div className="categorySort">
-                <p className="filterTopic">Sort by Category:</p>
-                <p onClick={() => props.categoryChosen("gin")}>- Blue</p>
-                <p onClick={() => props.categoryChosen("rum")}>- Red</p>
-                <p onClick={() => props.categoryChosen("tequila")}>- Green</p>
-                <p onClick={() => props.categoryChosen("triple sec")}>- Yellow</p>
+             
+            <div className="colorSort dropdown">
+                <a className="filterTopic">Sort by Color:</a>
+                <div class="dropdown-content">
+                <a onClick={() => props.categoryChosen("gin")}>- Blue</a>
+                <a onClick={() => props.categoryChosen("rum")}>- Red</a>
+                <a onClick={() => props.categoryChosen("tequila")}>- Green</a>
+                <a onClick={() => props.categoryChosen("triple sec")}>- Yellow</a>
+                </div>
             </div>
-            <div className="abcSort">
-                <p className="filterTopic">Sort by First Letter:</p>
+            <div className="categorySort dropdown">
+                <a className="filterTopic">Sort by Category:</a>
+                <div class="dropdown-content">
+                <a onClick={() => props.categoryChosen("gin")}>- Blue</a>
+                <a onClick={() => props.categoryChosen("rum")}>- Red</a>
+                <a onClick={() => props.categoryChosen("tequila")}>- Green</a>
+                <a onClick={() => props.categoryChosen("triple sec")}>- Yellow</a>
+                </div>
+            </div>
+            <div className="abcSort dropdown">
+                < a className="filterTopic">Sort by First Letter:</a>
+                <div class="dropdown-content">
                 {alphabet.map(
                     function(opt) {
                         return(
-                            <p key={opt} onClick={() => props.characterChosen(opt)}>- {opt}</p>
+                            <a key={opt} onClick={() => props.characterChosen(opt)}>- {opt}</a>
                         )
                     }
                 )}
+                </div>
             </div>
         </div>
     )
@@ -57,5 +67,6 @@ function FilterResults(props){
         </div>
     )
 }
+
 
 export {FilterOptions, FilterResults};

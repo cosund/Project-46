@@ -2,30 +2,34 @@
     display: none;
 }
 body {
-    background-color: lightblue;
+    background-image: url("https://s1.1zoom.me/big0/753/Drinks_Cocktail_Citrus_495546.jpg");
+    background-size: 1000px 600px;
+
 }
 .flexParent{ 
     display:flex; 
     flex-direction:column; 
 }
-
-/* MENUVIEW CSS */
 .menubar{
     height: 50px;
-    background-color: grey;
+    background-color: rgb(8, 8, 8);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .menubar > div{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(10, 10, 10, 0.8);
     text-align: center;
     margin: 20px;
     font-size: 20px;
-    font-family: "Lucida Console", "Courier New", monospace
+    font-family: "Times New Roman";
 }
 .menubar > div:hover{
     cursor: pointer;
+}
+a {
+    color: rgb(242, 242, 248);
+    text-decoration: none;
 }
 
 .dropdown {
@@ -37,18 +41,38 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(37, 27, 27, 0.2);
+    box-shadow: 0px 8px 16px 0px rgb(8, 8, 8);
     padding: 12px 16px;
     z-index: 1;
 }
 .dropdown:hover .dropdown-content {
     display: block;
     cursor: pointer;
-    background-color: lightsteelblue;
+    background-color: rgb(254, 254, 255);
 }
 
 /* FILTERVIEW CSS */
 .filterView{
+    display: flex;
+}
+.filterOptions{
+    min-width: 200px;
+    margin: 20px;
+    color: rgb(242, 242, 248);
+    text-decoration: none;
+}
+.filterOptions p:hover{
+    cursor: pointer;
+
+}
+.filterTopic{
+    text-decoration: underline;
+}
+.abcSort{
+    max-height: 200px;
+}
+
+.filterResults{
     display: flex;
     align-content: space-around;
     flex-wrap: wrap;
@@ -56,10 +80,42 @@ body {
 .results{
     margin: 50px;
     text-align: center;
-    background-color: lightslategrey;
+    background-color: rgb(125, 71, 161);
     padding: 10px;
+    border-radius: 25px;
 }
 .results:hover{
-    background-color: hotpink;
+    background-color: rgb(248, 246, 246);
     cursor: pointer;
 }
+.filterTopic {
+    background-color: #fff9f9;
+    color: rgb(15, 15, 15);
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #fdfdfd;}

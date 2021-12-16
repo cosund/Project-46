@@ -3,7 +3,6 @@
 }
 body {
     background-image: url("https://s1.1zoom.me/big0/753/Drinks_Cocktail_Citrus_495546.jpg");
-    background-size: cover;
 }
 .flexParent{ 
     display:flex; 
@@ -92,6 +91,7 @@ a {
     color: rgb(15, 15, 15);
     padding: 16px;
     font-size: 16px;
+    font-family: inherit;
     border-radius: 25px;
   }
   .dropdown {

@@ -16,7 +16,7 @@ function FilterOptions(props){
             <a onClick={() => props.categoryChosen("triple sec")}>Triple sec</a>
             </div>
             </div>
-             
+
             <div className="colorSort dropdown">
                 <a className="filterTopic">Sort by Color:</a>
                 <div class="dropdown-content">
@@ -37,7 +37,7 @@ function FilterOptions(props){
             </div>
             <div className="abcSort dropdown">
                 < a className="filterTopic">Sort by First Letter:</a>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                 {alphabet.map(
                     function(opt) {
                         return(

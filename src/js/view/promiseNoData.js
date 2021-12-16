@@ -3,7 +3,7 @@ function promiseNoData(promise, data, error){
       return <div><span>no data</span></div>;
     }
     else if((!error)&&(!data)){
-      return <img src="http://www.csc.kth.se/~cristi/loading.gif" alt="gif"/>;
+      return <img src="https://www.csc.kth.se/~cristi/loading.gif" alt="gif"/>;
     }
     else if(!data){
       return <span>some error</span>;

@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import firebase from "firebase/compat/app"; 
+import './js/firebaseConfig.js';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DrinkModel from './js/drinkModel.js';
+import {PersistModel, REF} from './js/firebaseModel.js';
 
 const myModel = new DrinkModel();
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App model={myModel}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+PersistModel(myModel);
+firebase.database().ref(REF).once("value").then( ()=>
+ReactDOM.render(<App model={myModel} />,document.getElementById("root")));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

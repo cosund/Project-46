@@ -29,7 +29,7 @@ function FilterPresenter(props){
                         }}
           />
           {promiseNoData(promise, data, error) ||
-          <FilterResults filterResults={data} />}
+          <FilterResults filterResults={data} drinkChosen={(id) => props.model.setCurrentDrink(id)}/>}
         </div>
       </React.Fragment>
   

@@ -18,7 +18,7 @@ function PersistModel(model){
 	     try{ //tries the whole try-block,before "commiting"
          if(data.val()){
            model.setDrinks(data.val().drinks || []);
-           model.setCurrentDish(data.val().currentDrink || null);
+           model.setCurrentDrink(data.val().currentDrink || null);
          }
        } catch(e) { //catches error in try-block
          console.trace()

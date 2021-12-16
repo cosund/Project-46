@@ -1,7 +1,7 @@
-import DrinkSource from "./view/drinkSource";
+import DrinkSource from "./view/drinkSource.js";
 
 class DrinkModel{
-  constructor(drinks=[], currentDrink=null, currentFilter = null){
+  constructor(drinks=[], currentDrink = null, currentFilter = null){
       this.observers = [];
       this.drinks = drinks;
       this.currentDrink = currentDrink;
@@ -39,11 +39,13 @@ class DrinkModel{
       this.notifyObservers()
     }
     };
-    setDishes(drinks){
+    setDrinks(drinks){
       this.drinks= [...drinks];
       this.notifyObservers()
     }
     setCurrentDrink(id){
+      console.log(id);
+      if(id === undefined){id = 11007;}
       if(this.currentDrink === id){
         return
       }
@@ -51,7 +53,6 @@ class DrinkModel{
       this.currentDrinkDetails = null;
       this.currentDrinkError = null;
       this.notifyObservers();
-
       if(this.currentDrink) {
         DrinkSource.getDrinkDetails(this.currentDrink)
         .then((results) => {

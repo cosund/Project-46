@@ -1,5 +1,6 @@
 import './style.css';
 import DrinkSource from './drinkSource';
+import DrinkModel from '../drinkModel';
 
 let alphabet = ['A', 'B', 'C', 'D', 'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','Z'];
 function FilterOptions(props){
@@ -47,7 +48,10 @@ function FilterResults(props){
             {props.filterResults.drinks.map(
                 function(opt){
                     return(
-                            <div className="results" key={opt.idDrink} onClick={()=> window.location.hash="#details"}>
+                            <div className="results" key={opt.idDrink} onClick={
+                                    ()=> {props.drinkChosen(opt.idDrink);
+                                        console.log(opt.idDrink,"hejhej");
+                                    window.location.hash="#details"}}>
                                 <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
                                 <p>{opt.strDrink}</p>
                             </div>

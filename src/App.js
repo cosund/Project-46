@@ -4,6 +4,7 @@ import ShowPresenter from './js/reactjs/showPresenter.js';
 import FilterPresenter from './js/reactjs/filterPresenter.js';
 import MyDrinkView from './js/view/myDrinkView';
 import MenuPresenter from './js/reactjs/MenuPresenter';
+import DetailsPresenter from './js/reactjs/detailsPresenter';
 import StartView from './js/view/startView';
 import './js/view/drinkSource.js';
 import './js/view/style.css';
@@ -27,6 +28,10 @@ function App(props){
 
             <ShowPresenter hash="#search">
               <SearchPresenter model={props.model}/>
+            </ShowPresenter>
+
+            <ShowPresenter hash="#details">
+              <DetailsPresenter model={props.model}/>
             </ShowPresenter>
           </div>
          </div>

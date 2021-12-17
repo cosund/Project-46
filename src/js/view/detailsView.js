@@ -25,7 +25,7 @@ function DetailsView(props){
                     {ingredientsArray.map(
                         function(opt) {
                             return(
-                                <tr><td key={opt.ing}>- {opt.ing} ({opt.measure})</td></tr>
+                                <tr key={opt.ing}><td key={opt.ing}>- {opt.ing} ({opt.measure})</td></tr>
                         )
                     })
                 }   

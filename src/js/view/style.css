@@ -119,9 +119,35 @@ a {
 
 .dropdown:hover .dropbtn {background-color: #fdfdfd;}
 
-.start{
+.rubrik{
+    color: #ffffff;
+    font-size: 80px;
     display: flex;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.viewButton{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.startButton{
+    background-color: #87CEFA;
+    padding: 15px 32px;
+    cursor: pointer;
+}
+
+.text{
+    color:white;
+    text-shadow: 0 0 5px #000000, 0 0 5px #2934ce;
+    font-size: 25px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
 }

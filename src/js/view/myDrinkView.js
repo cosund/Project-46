@@ -1,11 +1,11 @@
 function MyDrinkView(props){
-  console.log(props.model.drinks);
+  console.log(props.drinks);
   return(
     <div>
       <h1> My Drink Page </h1>
       <table>
           <tbody>
-            {props.model.drinks.map((drink) =>
+            {props.drinks.map((drink) =>
               <tr key={drink.id}>
                 <td>
                   <button onClick={() => props.removeDrink(drink)}> X </button>

@@ -6,20 +6,17 @@ import DetailsView from "../view/detailsView";
 import DrinkSource from '../view/drinkSource';
 
 function DetailsPresenter(props){
+  const currentDrink = useModelProperty(props.model, "currentDrink");
   const currentDrinkDetails = useModelProperty(props.model, "currentDrinkDetails");
-  console.log("currDriDet",currentDrinkDetails);
-   
-  const [promise, setPromise]=React.useState(null);
-  React.useEffect(function(){
-      setPromise(DrinkSource.getDrinkDetails("11009"));
-    }, []);
-  const [data, error] = usePromise(promise);
-    console.log("data in details",data);
+  const currentDrinkError = useModelProperty(props.model, "currentDrinkError");
+  console.log("currDrink: ",currentDrink);
+  
   return(
-    promiseNoData(promise,data,error)
-    || (<DetailsView
-          drinkDetails = {data}
-        />))
+      <React.Fragment>
+          {promiseNoData(currentDrink, currentDrinkDetails, currentDrinkError) || 
+          <DetailsView drinkDetails = {currentDrinkDetails}/>}
+      </React.Fragment>
+  )
 }
 
 export default DetailsPresenter;

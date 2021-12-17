@@ -17,7 +17,7 @@ function FilterOptions(props){
             <a onClick={() => props.categoryChosen("triple sec")}>Triple sec</a>
             </div>
             </div>
-
+             
             <div className="colorSort dropdown">
                 <a className="filterTopic">Sort by Color:</a>
                 <div className="dropdown-content">
@@ -58,9 +58,8 @@ function FilterResults(props){
             {props.filterResults.drinks.map(
                 function(opt){
                     return(
-                            <div className="results" key={opt.idDrink} onClick={
-                                    ()=> {props.drinkChosen(opt.idDrink);
-                                    window.location.hash="#details"}}>
+                            <div className="results" key={opt.idDrink} onClick={()=> {props.drinkChosen(opt.idDrink); 
+                                                                                    window.location.hash="#details"}}>
                                 <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
                                 <p>{opt.strDrink}</p>
                             </div>

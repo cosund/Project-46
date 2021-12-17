@@ -9,15 +9,21 @@ function DetailsView(props){
             </img>
             <table>
                 <thead>
-                    ingredients
+                    <tr><td>ingredients:</td></tr>
                 </thead>
                 <tbody>
-                    {//[...props.drinkDetails.drinks[0].filter(checkIfIngredient).map( =>
+                    {//insert props.drinkDetails.drinks[0].strMeasureX + props.drinkDetails.drinks[0].strIngredientX här 
+                        // utan att ta med alla 16, som söger null...
                     }
 
                     
                 </tbody>
             </table>
+            <table><tbody>
+                <tr><td>instructions:</td></tr>
+                <tr>
+                    <td>{props.drinkDetails.drinks[0].strInstructions}</td>
+                </tr></tbody></table>
         </div>
     )
 }

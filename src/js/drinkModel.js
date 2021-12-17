@@ -1,10 +1,11 @@
 import DrinkSource from "./view/drinkSource.js";
 
 class DrinkModel{
-  constructor(drinks=[], currentDrink = null, currentFilter = null){
+  constructor(drinks=[], currentDrink = null, currentDrinkDetails = null, currentFilter = null){
       this.observers = [];
       this.drinks = drinks;
       this.currentDrink = currentDrink;
+      this.currentDrinkDetails = currentDrinkDetails;
       this.currentFilter = currentFilter;
     }
 
@@ -44,10 +45,9 @@ class DrinkModel{
       this.notifyObservers()
     }
     setCurrentDrink(id){
-      console.log(id);
-      if(id === undefined){id = 11007;}
+      console.log("currentID",id);
       if(this.currentDrink === id){
-        return
+        return;
       }
       this.currentDrink = id;
       this.currentDrinkDetails = null;

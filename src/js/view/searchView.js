@@ -22,7 +22,8 @@ function SearchResultsView(props){
           function(opt){
             return(
               <div className="SearchResults" key={opt.idDrink} onClick={
-                  () => {props.drinkChosen(opt.id); window.location.hash="#details";}}>
+                  () => {props.drinkChosen(opt.idDrink);
+                         window.location.hash="#details";}}>
                 <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
                 <p className="SearchResults">{opt.strDrink}</p>
               </div>

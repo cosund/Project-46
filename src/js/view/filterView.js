@@ -7,9 +7,9 @@ let mainIng = new Array(DrinkSource.listCategories("i").then(data => data));
 function FilterOptions(props){
     return(
         <div className="filterOptions">
-            <div class="ingrediensort dropdown">
-            <button class="filterTopic">Sort by main Ingredient</button>
-            <div class="dropdown-content">
+            <div className="ingrediensort dropdown">
+            <button className="filterTopic">Sort by main Ingredient</button>
+            <div className="dropdown-content">
             <a onClick={() => props.categoryChosen("vodka")}>Vodka</a>
             <a onClick={() => props.categoryChosen("gin")}>Gin</a>
             <a onClick={() => props.categoryChosen("rum")}>Rum</a>
@@ -20,7 +20,7 @@ function FilterOptions(props){
 
             <div className="colorSort dropdown">
                 <a className="filterTopic">Sort by Color:</a>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                 <a onClick={() => props.categoryChosen("gin")}>- Blue</a>
                 <a onClick={() => props.categoryChosen("rum")}>- Red</a>
                 <a onClick={() => props.categoryChosen("tequila")}>- Green</a>
@@ -29,7 +29,7 @@ function FilterOptions(props){
             </div>
             <div className="categorySort dropdown">
                 <a className="filterTopic">Sort by Category:</a>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                 <a onClick={() => props.categoryChosen("gin")}>- Blue</a>
                 <a onClick={() => props.categoryChosen("rum")}>- Red</a>
                 <a onClick={() => props.categoryChosen("tequila")}>- Green</a>
@@ -60,7 +60,6 @@ function FilterResults(props){
                     return(
                             <div className="results" key={opt.idDrink} onClick={
                                     ()=> {props.drinkChosen(opt.idDrink);
-                                        console.log(opt.idDrink,"hejhej");
                                     window.location.hash="#details"}}>
                                 <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
                                 <p>{opt.strDrink}</p>

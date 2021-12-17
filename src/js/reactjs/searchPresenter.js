@@ -27,7 +27,11 @@ function SearchPresenter(props){
                   }}
         />
       {promiseNoData(promise, data, error) ||
-         <SearchResultsView searchResults={data} drinkChosen={(id) => props.model.setCurrentDrink(id)}/>}
+         <SearchResultsView searchResults={data} 
+                            drinkChosen={id => 
+                                setPromise(DrinkSource.getDrinkDetails(id))
+                                }
+        />}
       </React.Fragment>
 
   )

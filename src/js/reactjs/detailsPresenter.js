@@ -1,9 +1,9 @@
 import React from 'react';
 import useModelProperty from './useModelProperty';
-import usePromise from "./usePromise";
 import promiseNoData from "../view/promiseNoData";
 import DetailsView from "../view/detailsView";
-import DrinkSource from '../view/drinkSource';
+import DrinkModel from '../drinkModel';
+
 
 function DetailsPresenter(props){
   const currentDrink = useModelProperty(props.model, "currentDrink");
@@ -14,7 +14,10 @@ function DetailsPresenter(props){
   return(
       <React.Fragment>
           {promiseNoData(currentDrink, currentDrinkDetails, currentDrinkError) || 
-          <DetailsView drinkDetails = {currentDrinkDetails}/>}
+          <DetailsView 
+          drinkDetails = {currentDrinkDetails}
+          drinkAdded = {drinks => DrinkModel.addToMenu(drinks)}
+          />}
       </React.Fragment>
   )
 }

@@ -17,8 +17,8 @@ function DetailsView(props){
             <img src={props.drinkDetails.drinks[0].strDrinkThumb} className="detailImage" 
                 height="400"alt={props.drinkDetails.drinks[0].strDrink}>
             </img>
-            <button
-    onClick={ (event)=> {props.drinkAdded(props.drinkDetails); window.location.hash="#search";} }> Add to menu! </button>
+            <button disabled={props.isDrinkInMenu}
+    onClick={ (event)=> {props.drinkAdded(props.drinkDetails)} }> Add to menu! </button>
     <button onClick={e => window.location.hash="#search"}> Back </button>
             <table>
                 <thead>

@@ -34,9 +34,9 @@ class DrinkModel{
     }
     };
     removeFromMenu(drinkData){
-      const found = this.drinks.filter(e => drinkData === e)
-      if(found[0] === drinkData){
-      this.drinks = this.drinks.filter(drinkID => drinkID.id !== drinkData.id)
+      const found = this.drinks.filter(e => drinkData === e.drinks[0].idDrink)
+      if(found[0].drinks[0].idDrink === drinkData){
+      this.drinks = this.drinks.filter(drinkID => drinkData !== drinkID.drinks[0].idDrink)
       this.notifyObservers()
     }
     };
@@ -45,7 +45,6 @@ class DrinkModel{
       this.notifyObservers()
     }
     setCurrentDrink(id){
-      console.log("currentID",id);
       if(this.currentDrink === id){
         return;
       }

@@ -10,8 +10,7 @@ function DetailsPresenter(props){
   const currentDrinkDetails = useModelProperty(props.model, "currentDrinkDetails");
   const currentDrinkError = useModelProperty(props.model, "currentDrinkError");
   const drinks = useModelProperty(props.model, "drinks");
-
-  return(
+return(
       <React.Fragment>
           {promiseNoData(currentDrink, currentDrinkDetails, currentDrinkError) || 
           <DetailsView 

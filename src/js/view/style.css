@@ -86,6 +86,9 @@ a {
     background-color: rgb(248, 246, 246);
     cursor: pointer;
 }
+.resultsP{
+    width: 95%;
+}
 .filterTopic {
     background-color: #fff9f9;
     color: rgb(15, 15, 15);

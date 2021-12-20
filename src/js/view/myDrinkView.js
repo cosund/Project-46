@@ -1,5 +1,4 @@
 function MyDrinkView(props){
-  console.log(props.drinks);
   return(
     <div>
       <h1> My Drink Page </h1>

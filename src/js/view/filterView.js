@@ -58,17 +58,16 @@ function FilterResults(props){
             {props.filterResults.drinks.map(
                 function(opt){
                     return(
-                            <div className="results" key={opt.idDrink} onClick={()=> {props.drinkChosen(opt.idDrink); 
-                                                                                    window.location.hash="#details"}}>
-                                <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
-                                <p>{opt.strDrink}</p>
-                            </div>
+                        <div className="results" key={opt.idDrink} onClick={
+                            () => {props.drinkChosen(opt.idDrink); window.location.hash="#details";}}>
+                            <img src={opt.strDrinkThumb} alt={opt.strDrink} height="100"></img>
+                            <p className="resultsP">{opt.strDrink}</p>
+                        </div>
                         )
                     }
                 )}
         </div>
     )
 }
-
 
 export {FilterOptions, FilterResults};

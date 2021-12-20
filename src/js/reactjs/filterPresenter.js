@@ -32,7 +32,7 @@ function FilterPresenter(props){
           <FilterResults filterResults={data} drinkChosen={(id) => {props.model.setCurrentDrink(id)}}/>}
         </div>
       </React.Fragment>
-  
+      
     )
   }
   

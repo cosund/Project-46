@@ -14,7 +14,7 @@ function DetailsView(props){
     return(
         <div className="detailsView">
             <h2>{props.drinkDetails.drinks[0].strDrink}</h2>
-            <img src={props.drinkDetails.drinks[0].strDrinkThumb} className="detailImage" 
+            <img className="" src={props.drinkDetails.drinks[0].strDrinkThumb} className="detailImage" 
                 height="400"alt={props.drinkDetails.drinks[0].strDrink}>
             </img>
             <button disabled={props.isDrinkInMenu}

@@ -3,6 +3,7 @@ import DrinkSource from '../view/drinkSource.js';
 import usePromise from './usePromise.js';
 import promiseNoData from '../view/promiseNoData.js';
 import {FilterOptions, FilterResults} from '../view/filterView.js';
+import myModel from '../../index.js';
 
 function FilterPresenter(props){
     //hooks called and returning current value
@@ -29,7 +30,7 @@ function FilterPresenter(props){
                         }}
           />
           {promiseNoData(promise, data, error) ||
-          <FilterResults filterResults={data} drinkChosen={(id) => {props.model.setCurrentDrink(id)}}/>}
+          <FilterResults filterResults={data} drinkChosen={(id) => {myModel.setCurrentDrink(id)}}/>}
         </div>
       </React.Fragment>
       

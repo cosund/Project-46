@@ -29,7 +29,12 @@ a {
     color: rgb(242, 242, 248);
     text-decoration: none;
 }
-
+a:hover {
+    color:black;
+}
+.menuItem:hover{
+    background-color: green;
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -83,7 +88,7 @@ a {
     border-radius: 25px;
 }
 .results:hover{
-    background-color: rgb(248, 246, 246);
+    background-color:burlywood;
     cursor: pointer;
 }
 .resultsP{
@@ -155,4 +160,11 @@ a {
     margin-top: 100px;
     justify-content: center;
     align-items: center;
+}
+.detailsView{
+    background-color: #ff59;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

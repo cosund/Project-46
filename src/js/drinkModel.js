@@ -49,7 +49,6 @@ class DrinkModel{
         return;
       }
       this.currentDrink = id;
-      console.log("in setCurrentDrink",id);
       this.currentDrinkDetails = null;
       this.currentDrinkError = null;
       this.notifyObservers();

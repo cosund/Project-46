@@ -1,35 +1,23 @@
 function MyDrinkView(props){
   return(
-    <div>
+    <div className="filterResults">
       <h1> My Drink Page </h1>
-      <table>
-          <tbody>
+          <div>
             {props.drinks.map(function(drink){
               return(
-              <tr key={drink.drinks[0].idDrink}>
-                <td>
+                <div className="results" key={drink.drinks[0].idDrink}
+                  onClick={event =>
+                    {event.preventDefault();
+                    props.drinkChoice(drink.drinks[0].idDrink);
+                    window.location.hash="#details";
+                    }}>
                   <button onClick={() => props.removeDrink(drink.drinks[0].idDrink)}> Remove </button>
                   <img src={drink.drinks[0].strDrinkThumb} height="100"></img>
-                </td>
-                <td>
-                  <a href="#details" onClick={event =>
-                    {event.preventDefault();
-                      props.drinkChoice(drink.drinks[0].idDrink);
-                      window.location.hash="#details";
-                      }}>
+                  <p className="resultsP" href="#details">
                     {drink.drinks[0].strDrink}
-                  </a>
-                </td>
-              </tr>
+                  </p>
+                </div>
               )
 })}
-          <tr>
-          </tr>
-          </tbody>
-        </table>
-    </div>
-  )
-}
-// drinks[0].idDrink
-
+</div></div>)}
 export default MyDrinkView;
